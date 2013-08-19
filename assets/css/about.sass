@@ -1,0 +1,139 @@
+@mixin gradient_by_button($colorStart, $colorCenter, $colorEnd)
+	background: $colorStart /* Old browsers */
+	background: -moz-linear-gradient(top,  $colorStart 0%, $colorStart 50%, $colorCenter 50%, $colorEnd 75%, $colorEnd 100%) // FF3.6+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$colorStart), color-stop(50%,$colorStart), color-stop(50%,$colorCenter), color-stop(75%,$colorEnd), color-stop(100%,$colorEnd)) // Chrome,Safari4+ 
+	background: -webkit-linear-gradient(top,  $colorStart 0%,$colorStart 50%,$colorCenter 50%,$colorEnd 75%,$colorEnd 100%) // Chrome10+,Safari5.1+ 
+	background: -o-linear-gradient(top,  $colorStart 0%,$colorStart 50%,$colorCenter 50%,$colorEnd 75%,$colorEnd 100%) // Opera 11.10+ 
+	background: -ms-linear-gradient(top,  $colorStart 0%,$colorStart 50%,$colorCenter 50%,$colorEnd 75%,$colorEnd 100%) // IE10+ 
+	background: linear-gradient(to bottom,  $colorStart 0%,$colorStart 50%,$colorCenter 50%,$colorEnd 75%,$colorEnd 100%) // W3C 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorStart', endColorstr='$colorEnd',GradientType=0 ) // IE6-9 
+
+@mixin float_left
+	float: left
+	margin: 0 50px 30px 0
+@mixin float_right
+	float: right
+	margin: 0 0 30px 50px
+.float_left
+	@include float_left
+.float_right
+	@include float_right
+h1
+	font:
+		size: 46px
+		weight: 300
+	line-height: 1
+	margin-bottom: 60px
+h2
+	font:
+		size: 38px
+		weight: 300
+	line-height: 1
+	margin-bottom: 50px
+
+.orange_button
+	@include gradient_by_button(#ffc04d, #ffb040, #ffa033)
+	border:
+		bottom: 1px solid #ff751c
+		radius: 6px
+	color: #fff
+	font:
+		size: 16px
+		weight: bold
+	text:
+		transform: uppercase
+		align: center
+		decoration: none
+		shadow: 0 -1px 1px #f96e29
+	padding: 10px 16px
+	&.select
+		color: #000
+	&:hover
+		@include gradient_by_button(#41c9fb, #36b1f4, #2e9ae9)
+		border-bottom: 1px solid #227be3
+		text-shadow: 0 -1px 1px #1767de
+
+.paragraph
+	overflow: hidden
+	margin-bottom: 50px
+	p.title
+		font:
+			size: 32px
+			weight: 300
+		line-height: 1
+	p
+		font:
+			size: 14px
+		line-height: 1.4
+		margin: 0 0 30px
+	&.about h2
+		text-align: center
+		position: relative
+		margin-top: 70px
+		&:before
+			content: ""
+			display: inline-block
+			width: 48px
+			height: 48px
+			background: url("/assets/img/title_sprites.png") no-repeat
+			position: absolute
+			top: -70px
+			left: 50%
+			margin-left: -24px
+	&.about.teams h2:before
+		background-position: 0 -102px
+	.viewcam
+		position: relative
+		display: inline-block
+		@include float_left
+		&:after
+			display: block
+			position: absolute
+			z-index: 10
+			content: ""
+			width: 114px
+			height: 134px
+			bottom: 0
+			right: 50px
+			background: url("/assets/img/webcam.png") no-repeat
+		span[class|='courner']
+			background:
+				image: url("/assets/img/round_corners.png")
+				repeat: no-repeat
+			width: 33px
+			height: 38px
+			display: block
+			position: absolute
+		.courner-lt
+			top: 16px
+			left: 16px
+			background-position: 0 0
+		.courner-lb
+			bottom: 16px
+			left: 16px
+			background-position: 0 -34px
+		.courner-rt
+			top: 16px
+			right: 16px
+			background-position: -33px 0
+		.courner-rb
+			bottom: 16px
+			right: 16px
+			background-position: -33px -34px
+		.orange_button
+			position: absolute
+			top: 50%
+			left: 50%
+			z-index: 20
+			margin:
+				top: -19px
+				left: -72px
+/* teams */
+.teams
+	.team
+		display: inline-block
+		vertical-align: top
+		width: 234px
+		margin-right: 15px
+		&:last-child
+			margin-right: 0
