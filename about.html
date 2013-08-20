@@ -10,6 +10,11 @@
 	<link rel="stylesheet" href="/assets/css/about.css">
 	<title>Ford</title>
 	<script src="http://api-maps.yandex.ru/2.0.27/?load=package.standard&lang=ru-RU"></script>
+	
+	<!-- fancyBox -->
+	<link rel="stylesheet" href="/assets/css/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/assets/css/selectbox/jquery.selectbox.css" type="text/css" media="screen" />
+
 </head>
 <body>
 	
@@ -22,7 +27,7 @@
 				<li style="width:100px;"><a href="#">О дилере</a></li>
 			</ul>
 			<div class="test">
-				<a class="green_button" href="#"><img src="/assets/img/test_drive.png" alt=""></a>
+				<a class="green_button fancybox" href="#test-drive-box"><img src="/assets/img/test_drive.png" alt=""></a>
 				<div class="hint">Записаться на тест-драйв</div>
 			</div>
 			<ul class="contacts">
@@ -88,10 +93,122 @@
 					<p class='name'>Александр Викторович Березкин</p>
 					<p class="position">Специалист отдела запасных частей КЦ</p>
 				</div>
+				<div class="team">
+					<img src="/assets/img/tmp/team-4.jpg" alt="">
+					<p class='name'>Александр Викторович Березкин</p>
+					<p class="position">Специалист отдела запасных частей КЦ</p>
+				</div>
 			</div>
 				
 		</section>
 
+
+		<div class="paragraph about map fix_width">
+			<h2>СОТРУДНИКИ</h2>
+		</div>
+		<section class="map">
+			<div id="map">
+				<img src="assets/img/tmp/map-2.jpg" alt="" style="width: 1400px; height: 470px;">
+			</div>
+
+			<p class="address">Тюмень, ул. Республики, 278 </p>
+			<p class="phones">Отдел продаж: (3452) 290-007 </p>
+			<p class="phones">Сервисный центр: (3452) 290-01 </p>
+		</section>
+
+		<section class="partners fix_width">
+			<h3 class="header">
+				Наши партнеры
+			</h3>
+			<a href="#" class="partner nissan"></a>
+			<a href="#" class="partner toyota"></a>
+		</section>
+
+		
+		<section class="site_map four">
+			<div class="content fix_width">
+				<div class="col-1">
+					<div class="divide">
+						<a href="#" class="head">Машины</a>
+						<a href="#" class="">Ford Focus ST</a>
+						<a href="#" class="">Ford Mondeo</a>
+						<a href="#" class="">Ford Kuga</a>
+						<a href="#" class="">Ford S-max</a>
+						<a href="#" class="">Ford Galaxy</a>
+						<a href="#" class="">Ford Focus</a>
+						<a href="#" class="">Ford Focus ST</a>
+						<a href="#" class="">Ford Mondeo</a>
+						<a href="#" class="">Ford Kuga</a>
+						<a href="#" class="">Ford S-max</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="divide">
+						<a href="#" class="head">Машины будущего</a>
+						<a href="#" class="">Ford Focus 2015</a>
+						<a href="#" class="">Ford Mustang 2015</a>
+					</div>
+					<a href="#" class="head">Архив машин</a>
+					<a href="#" class="">Ford Focus</a>
+					<a href="#" class="">Ford Galaxy</a>
+					<a href="#" class="">Ford Focus</a>
+					<a href="#" class="">Ford Galaxy</a>
+					<a href="#" class="">Ford Focus</a>
+					<a href="#" class="">Ford Galaxy</a>
+					<a href="#" class="">Ford Focus</a>
+
+				</div>
+				<div class="col-3">
+					<div class="divide">
+						<a href="#" class="head">Гид покупателя</a>
+						<a href="#" class="">Лизинг</a>
+						<a href="#" class="">Кредитование</a>
+						<a href="#" class="">Страхование</a>
+						<a href="#" class="">Техническое облуживание</a>
+					</div>
+					<a href="#" class="head">Корпоративным
+клиентам</a>
+					<a href="#" class="">Корпоративные клиенты</a>
+					<a href="#" class="">Дилерская сеть</a>
+					<a href="#" class="">Наши услуги</a>
+				</div>
+				<div class="col-4">
+					<div class="divide">
+						<a href="#" class="head">О дилере</a>
+						<a href="#" class="">Отзывы клиентов</a>
+						<a href="#" class="">Награды</a>
+						<a href="#" class="">Горячая линия</a>
+						<a href="#" class="">Вакансии</a>
+						<a href="#" class="">Тенде</a>
+					</div>
+					<a href="#" class="head">О FORD</a>
+					<a href="#" class="">Технологии FORD</a>
+					<a href="#" class="">Кинетический</a>
+					<a href="#" class="">Спорт с FORD</a>
+				</div>
+		</section>
+
+		<section class="recommended">
+			<div class="brace">
+				<p class="header">Рекомендуем</p>
+				<img src="\assets\img\brace.png" alt="">
+			</div>
+				
+			<div class="block first">
+				<a href="#" class="block_head">Узнать о наших акциях</a>
+				<p href="#" class="block_text">Мы постоянно проводим различные акции и спецпредложения</p>
+			</div>
+			<div class="block second">
+				<a href="#" class="block_head">Выбрать модель FORD</a>
+				<p href="#" class="block_text">Выберите модель Ford по своему вкусу</p>
+			</div>
+			<div class="block third">
+				<a href="#" class="block_head">Программа TradeIn</a>
+			</div>
+		</section>
+		
+
+		<!-- before footer -->
 		<section class="before_footer">
 			<div class="content fix_width">
 				<div class="col-1">
@@ -162,6 +279,11 @@
 	</div>
 
 	<div id="footer">
+
+		<select name="" id="sel">
+			<option value="gghghghg"></option>
+		</select>
+
 		<div class="cintent fix_width">
 			<div class="ford_info">
 				<a href="/" class="fordlogo"><img src="/assets/img/ford-logo.png" alt=""></a>
@@ -191,8 +313,62 @@
 	</div>
 
 
+	<div id="test-drive-box">
+		<div class="drive-col left">
+			<h3 id="drive-header">Запись на тест-драйв</h3>
+			<form action="" class="form">
+				<div class="row">
+					<label for="select">Выбранная модель</label>
+					<select name="" id="">
+						<option value="gghghghg"></option>
+					</select>
+				</div>
+				<div class="row">
+					<label for="input1">Как Вас зовут</label>
+					<input id="input1" type="text" placeholder="Ваше имя">
+				</div>
+				<div class="row">
+					<label for="input2">Ваш телефон</label>
+					<input id="input2" type="text">
+				</div>
+				<div class="row">
+					<label for="input3">Ваш e-mail</label>
+					<input id="input3" type="text">
+				</div>
+				<div class="arrow">
+				<img src="/assets/img/arrow-up.png" alt="">
+				<p class="arrow">Сюда мы направим всю информацию по тест-драйву</p>
+				</div>
+				<div class="write">
+					<img src="/assets/img/24.png" alt="">
+					<p class="24text">Мы свяжется с вами в течение 24 часов</p>
+					<a class="green_button" href="#">Записаться</a>
+				</div>
+			</form>
+		</div>
+		<div class="drive-col right">
+			<img src="/assets/img/drive-car.png" alt="">
+			<p class="comment">
+				Комментарий
+				</p>
+				<textarea name="comment" id="comment" cols="30" rows="4">Здравствуйте, уважаемый Автоград. Меня зовут Александр и я хочу прокатиться на новом Форде Фокусе.
+				</textarea>
+				<div id="secured">
+					<img id="lock" src="/assets/img/lock.png" alt="">
+					<div class="lock">
+					<p id="lock-big">Ваши данные в безопасности</p>
+					<p id="lock-text">Мы используем защищенное соединение</p>
+					</div>
+				</div>
+		</div>
+			
+	</div>
+
 	<script src="/assets/js/lib/jquery.1-10-1.min.js"></script>
+	<script type="text/javascript" src="/assets/js/lib/jquery.fancybox.pack.js?v=2.1.5"></script>
 	<script src="/assets/js/lib/jquery.color.js"></script>
 	<script src="/assets/js/script.js"></script>
+	<script src="/assets/js/lib/jquery.selectbox-0.2.min.js"></script>
+
 </body>
 </html>

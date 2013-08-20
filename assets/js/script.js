@@ -1,5 +1,14 @@
 
 $(document).ready(function() {
+
+	$(".fancybox").fancybox({
+		afterShow: function() {
+			//$this = $(this);
+			$("form").find('select').selectbox();
+		}
+	});
+
+	$('#sel').selectbox();
 	
 	$('#header .test a').mouseenter(function() {
 		$(this).next('.hint').stop(true, true).fadeIn(200);
@@ -39,8 +48,6 @@ $(document).ready(function() {
 			myMap.geoObjects.add(myPlacemark);
         });
 	});
-
-
 });
 
 

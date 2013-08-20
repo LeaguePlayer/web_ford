@@ -78,6 +78,8 @@ h2 {
       margin-left: -24px; }
   .paragraph.about.teams h2:before {
     background-position: 0 -102px; }
+  .paragraph.about.map h2:before {
+    background-position: 0 -51px; }
   .paragraph .viewcam {
     position: relative;
     display: inline-block;
@@ -132,3 +134,166 @@ h2 {
   margin-right: 15px; }
   .teams .team:last-child {
     margin-right: 0; }
+  .teams .team p.name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 27px;
+    line-height: 1.3; }
+  .teams .team p.position {
+    color: #7c7c7c;
+    text-align: center;
+    font-style: italic;
+    padding: 0 20px 0; }
+
+#map {
+  width: 100%;
+  height: 470px; }
+
+.map {
+  margin-bottom: 100px; }
+  .map p.address {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 52px;
+    margin-bottom: 24px;
+    text-transform: uppercase; }
+  .map p.phones {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.3; }
+
+.partners {
+  text-align: center;
+  margin-bottom: 70px; }
+  .partners h3.header {
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 35px; }
+  .partners a.partner {
+    display: inline-block;
+    margin: 10px 15px;
+    width: 105px;
+    height: 90px;
+    margin-top: 10px;
+    background: url("/assets/img/tmp/partners.png") no-repeat;
+    background-position: -23px -6px; }
+    .partners a.partner.nissan {
+      background-position: -273px 0; }
+
+.site_map.four div[class|=col] {
+  width: 210px !important; }
+
+.recommended {
+  text-align: center;
+  margin-top: 95px;
+  margin-bottom: 56px; }
+  .recommended .brace {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 37px;
+    padding-top: 45px; }
+    .recommended .brace p.header {
+      display: inline-block;
+      font-size: 22px;
+      text-transform: uppercase;
+      vertical-align: middle;
+      margin-right: 15px; }
+    .recommended .brace img {
+      display: inline-block;
+      vertical-align: middle; }
+  .recommended .block {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    width: 228px;
+    height: 228px;
+    background: url("/assets/img/act.png") no-repeat;
+    background-position: 0px 0px; }
+    .recommended .block.second {
+      background-position: -228px; }
+    .recommended .block.third {
+      background-position: -456px; }
+    .recommended .block .block_head {
+      display: block;
+      font-size: 20px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      padding: 0 34px 0;
+      color: #3d9ae0; }
+
+#test-drive-box {
+  display: none;
+  padding: 10px;
+  width: 940px; }
+  #test-drive-box #drive-header {
+    font-size: 38px; }
+  #test-drive-box .drive-col {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top; }
+    #test-drive-box .drive-col img#lock {
+      display: inline-block;
+      margin-bottom: 20px; }
+    #test-drive-box .drive-col p.comment {
+      text-align: left;
+      margin-bottom: 20px;
+      font-size: 16px; }
+    #test-drive-box .drive-col #secured {
+      text-align: left;
+      margin-top: 10px; }
+      #test-drive-box .drive-col #secured img {
+        vertical-align: middle;
+        display: inline-block; }
+      #test-drive-box .drive-col #secured #lock-big {
+        display: inline-block; }
+      #test-drive-box .drive-col #secured #lock-text {
+        font-size: 12px; }
+    #test-drive-box .drive-col .lock {
+      display: inline-block; }
+
+.form input[type=text],
+.form textarea {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  background: white;
+  background: -moz-linear-gradient(top, white 0%, #e8e8e8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e8e8e8));
+  background: -webkit-linear-gradient(top, white 0%, #e8e8e8 100%);
+  background: -o-linear-gradient(top, white 0%, #e8e8e8 100%);
+  background: -ms-linear-gradient(top, white 0%, #e8e8e8 100%);
+  background: linear-gradient(to bottom, white 0%, #e8e8e8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 );
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  width: 300px; }
+.form label {
+  display: inline-block;
+  width: 180px;
+  font-size: 16px; }
+.form .arrow {
+  text-align: right; }
+  .form .arrow img {
+    vertical-align: top;
+    display: inline-block; }
+  .form .arrow p.arrow {
+    text-align: left;
+    display: inline-block;
+    width: 255px;
+    color: #bababa; }
+.form .write {
+  margin-top: 38px; }
+  .form .write img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px; }
+  .form .write p {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    font-size: 13px;
+    margin-right: 32px; }
