@@ -232,27 +232,18 @@ h2 {
   #test-drive-box .drive-col {
     display: inline-block;
     text-align: left;
-    vertical-align: top; }
+    vertical-align: bottom;
+    margin-bottom: 26px; }
     #test-drive-box .drive-col img#lock {
       display: inline-block;
       margin-bottom: 20px; }
     #test-drive-box .drive-col p.comment {
       text-align: left;
-      margin-bottom: 20px;
+      margin: 20px 0 20px 14px;
       font-size: 16px; }
-    #test-drive-box .drive-col #secured {
-      text-align: left;
-      margin-top: 10px; }
-      #test-drive-box .drive-col #secured img {
-        vertical-align: middle;
-        display: inline-block; }
-      #test-drive-box .drive-col #secured #lock-big {
-        display: inline-block; }
-      #test-drive-box .drive-col #secured #lock-text {
-        font-size: 12px; }
-    #test-drive-box .drive-col .lock {
-      display: inline-block; }
 
+.form .row {
+  position: relative; }
 .form input[type=text],
 .form textarea {
   font-family: "Open Sans", sans-serif;
@@ -275,18 +266,21 @@ h2 {
   display: inline-block;
   width: 180px;
   font-size: 16px; }
+.form select {
+  display: inline-block; }
 .form .arrow {
-  text-align: right; }
-  .form .arrow img {
-    vertical-align: top;
-    display: inline-block; }
-  .form .arrow p.arrow {
-    text-align: left;
-    display: inline-block;
-    width: 255px;
-    color: #bababa; }
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+  right: 0;
+  bottom: -26px;
+  width: 255px;
+  color: #bababa;
+  background: url(/assets/img/arrow-up.png) no-repeat;
+  padding-left: 52px; }
 .form .write {
-  margin-top: 38px; }
+  display: inline-block;
+  vertical-align: middle; }
   .form .write img {
     display: inline-block;
     vertical-align: middle;
@@ -297,3 +291,37 @@ h2 {
     width: 100px;
     font-size: 13px;
     margin-right: 32px; }
+  .form .write a.green_button {
+    width: 300px; }
+.form .button-row {
+  margin-top: 38px; }
+.form .secured {
+  display: inline-block;
+  vertical-align: middle;
+  background: url(/assets/img/lock.png) no-repeat;
+  height: 34px;
+  padding-left: 40px;
+  margin-left: 20px; }
+  .form .secured .texts {
+    display: inline-block;
+    vertical-align: middle; }
+    .form .secured .texts #text1 {
+      font-size: 16px; }
+    .form .secured .texts #text2 {
+      font-size: 12px; }
+.form #drive-header {
+  font-size: 38px;
+  margin-bottom: 45px; }
+
+#feedback-box {
+  width: 940px; }
+  #feedback-box .feedback-col {
+    display: inline-block;
+    vertical-align: top; }
+    #feedback-box .feedback-col .timer {
+      background: url(/assets/img/timer.png) no-repeat;
+      height: 44px;
+      padding-left: 50px;
+      width: 170px; }
+      #feedback-box .feedback-col .timer #timer-text {
+        font-size: 13px; }
