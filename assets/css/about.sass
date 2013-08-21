@@ -236,8 +236,8 @@ h2
 
 #test-drive-box
 	display: none
-	padding: 10px
 	width: 940px
+	margin: 15px 0px 45px 55px
 	#drive-header
 		font-size: 38px
 	.drive-col
@@ -252,7 +252,8 @@ h2
 			text-align: left
 			margin: 20px 0 20px 14px
 			font-size: 16px
-
+	.right
+		margin-left: 40px
 
 
 .form
@@ -272,14 +273,19 @@ h2
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ) /* IE6-9 */
 		border: none
 		border-radius: 12px
-		padding: 10px
-		margin: 10px
+		padding: 12px 10px
+		margin-bottom: 10px
 		outline: none
 		width: 300px
 	label
 		display: inline-block
+		vertical-align: top
 		width: 180px
 		font-size: 16px
+		font-family: "Open Sans", sans-serif
+		font-weight: bold
+		position: relative
+		top: 12px
 	select
 		display: inline-block
 
@@ -305,7 +311,9 @@ h2
 			vertical-align: middle
 			width: 100px
 			font-size: 13px
-			margin-right: 32px
+			margin-right: 14px
+			font-family: "Open Sans", sans-serif
+			font-style: italic
 		a.green_button
 			width: 300px
 	
@@ -318,7 +326,7 @@ h2
 		background: url(/assets/img/lock.png) no-repeat
 		height: 34px
 		padding-left: 40px
-		margin-left: 20px
+		margin-left: 40px
 		.texts
 			display: inline-block
 			vertical-align: middle
@@ -332,14 +340,121 @@ h2
 
 
 #feedback-box
+	display: none
 	width: 940px
 	.feedback-col
 		display: inline-block
 		vertical-align: top
-		.timer
+		&.left
+			margin: 45px 0px 30px 40px
+		&.right
+			margin: 45px 40px 30px 25px
+			width: 326px
+			.code
+				.captcha
+					display: inline-block
+					vertical-align: top
+					width: 145
+					height: 85
+					margin-right: 20px
+				.verify
+					display: inline-block
+					vertical-align: top
+					width: 150px
+					label
+						top: 0
+						margin-bottom: 10px
+					input
+						width: 145px
+				#capt_text
+					font-size: 12px
+			.send
+				width: 315px
+				margin-top: 16px
+				font-weight: 800
+			code
+				margin-bottom: 12px
+				label
+					top: 0
+		.feed_comment
+			display: inline-block
+			vertical-align: middle
+			
+		#timer
 			background: url(/assets/img/timer.png) no-repeat
 			height: 44px
-			padding-left: 50px
+			padding: 6px 50px
 			width: 170px
-			#timer-text
-				font-size: 13px
+			font-style: italic
+			font-family: "Open Sans", sans-serif
+			line-height: 1.3
+			font-size: 13px
+			font-weight: bold
+			margin-bottom: 22px
+
+
+.blue_text
+	color: #0cc5fd
+	font-weight: 800
+	font-family: "Open Sans", sans-serif
+	font-size: 20px
+
+#insurence-box
+	display: none
+	width: 937px
+	background: url(/assets/img/insurance.jpg) no-repeat
+	height: auto
+	border-radius: 5px 5px 0 0
+	h3
+		position: absolute
+		top: 75px
+		left: 100px
+		font-family: "Open Sans", sans-serif
+		font-size: 38px
+	#ins-content
+		margin: 0 50px 50px 50px
+		padding-top: 500px
+		ul
+			list-style: disc
+			margin: 30px
+			line-height: 2
+			font-weight: bold
+			font-size: 16px
+		#ins-after
+			color: #b3b3b3
+			font-style: italic
+			margin: 7px
+		.ins-buttons
+			text-align: center
+			padding-top: 30px
+			.ins-release
+				display: inline-block
+				vertical-align: middle
+				///background: url(/assets/img/umb.png) no-repeat
+				width: 300px
+			.ins-close
+				display: inline-block
+				vertical-align: middle
+				width: 110px
+				background: #e9e9e9
+				text-decoration: none
+				color: #f3f3f3
+				font-size: 16px
+				font-weight: bold
+				text-transform: uppercase
+				line-height: 2
+				border-radius: 5px
+				margin-left: 40px
+			.ins-close:hover
+				background: #000
+				color: #fff
+.ford_first
+	background: url(/assets/img/tmp/ford_smart.png) no-repeat
+	height: 300px
+
+
+
+
+
+
+

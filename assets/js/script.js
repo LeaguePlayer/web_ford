@@ -5,11 +5,11 @@ $(document).ready(function() {
 		afterShow: function() {
 			//$this = $(this);
 			$("form").find('select').selectbox();
-		}
+		},
+		padding: 0,
 	});
 
-	$('#sel').selectbox();
-	
+
 	$('#header .test a').mouseenter(function() {
 		$(this).next('.hint').stop(true, true).fadeIn(200);
 	});
