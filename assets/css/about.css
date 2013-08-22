@@ -379,39 +379,39 @@ h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 20px; }
 
-#insurence-box {
+#insurance-box {
   display: none;
   width: 937px;
   background: url(/assets/img/insurance.jpg) no-repeat;
   height: auto;
   border-radius: 5px 5px 0 0; }
-  #insurence-box h3 {
+  #insurance-box h3 {
     position: absolute;
     top: 75px;
     left: 100px;
     font-family: "Open Sans", sans-serif;
     font-size: 38px; }
-  #insurence-box #ins-content {
+  #insurance-box #ins-content {
     margin: 0 50px 50px 50px;
     padding-top: 500px; }
-    #insurence-box #ins-content ul {
+    #insurance-box #ins-content ul {
       list-style: disc;
       margin: 30px;
       line-height: 2;
       font-weight: bold;
       font-size: 16px; }
-    #insurence-box #ins-content #ins-after {
+    #insurance-box #ins-content #ins-after {
       color: #b3b3b3;
       font-style: italic;
       margin: 7px; }
-    #insurence-box #ins-content .ins-buttons {
+    #insurance-box #ins-content .ins-buttons {
       text-align: center;
       padding-top: 30px; }
-      #insurence-box #ins-content .ins-buttons .ins-release {
+      #insurance-box #ins-content .ins-buttons .ins-release {
         display: inline-block;
         vertical-align: middle;
         width: 300px; }
-      #insurence-box #ins-content .ins-buttons .ins-close {
+      #insurance-box #ins-content .ins-buttons .ins-close {
         display: inline-block;
         vertical-align: middle;
         width: 110px;
@@ -424,10 +424,58 @@ h2 {
         line-height: 2;
         border-radius: 5px;
         margin-left: 40px; }
-      #insurence-box #ins-content .ins-buttons .ins-close:hover {
+      #insurance-box #ins-content .ins-buttons .ins-close:hover {
         background: black;
         color: white; }
 
 .ford_first {
-  background: url(/assets/img/tmp/ford_smart.png) no-repeat;
-  height: 300px; }
+  margin-bottom: 60px; }
+  .ford_first .first-image {
+    display: inline-block;
+    vertical-align: middle; }
+  .ford_first .first-content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 450px; }
+    .ford_first .first-content .first-header {
+      font-size: 46px; }
+    .ford_first .first-content .first-title {
+      font-size: 38px;
+      background: #ffab12;
+      line-height: 55px;
+      margin: 30px 0;
+      text-transform: uppercase; }
+    .ford_first .first-content .first-description {
+      font-size: 22px;
+      line-height: 1.3;
+      width: 255px; }
+    .ford_first .first-content .first-link {
+      display: block;
+      font-size: 22px;
+      margin-top: 35px;
+      color: #3d9ae0; }
+
+.others {
+  margin-bottom: 60px; }
+  .others .others-header {
+    font-size: 38px;
+    text-transform: uppercase; }
+  .others .others-item {
+    margin-top: 60px; }
+    .others .others-item .others-image {
+      display: inline-block;
+      vertical-align: middle;
+      width: 375px;
+      height: 210; }
+    .others .others-item .others-content {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 35px;
+      width: 550px; }
+      .others .others-item .others-content .others-link {
+        font-size: 24px;
+        color: #3d9ae0;
+        font-weight: bold; }
+      .others .others-item .others-content .others-text {
+        margin: 27px 0;
+        line-height: 1.5; }
