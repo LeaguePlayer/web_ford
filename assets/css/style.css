@@ -531,6 +531,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ea06', end
 	#content .site_map div[class|='col'] {
 		display: inline-block;
 		vertical-align: top;
+		line-height: 20px;
 	}
 	#content .site_map .col-1 {
 		width: 300px;

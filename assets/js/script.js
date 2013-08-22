@@ -7,6 +7,7 @@ $(document).ready(function() {
 			$("form").find('select').selectbox();
 		},
 		padding: 0,
+		fitToView: false,
 	});
 
 
