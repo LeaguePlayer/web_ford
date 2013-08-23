@@ -198,9 +198,7 @@ h2
 		background-position: -23px -6px
 		&.nissan
 			background-position: -273px 0
-
-.site_map.four div[class|=col]
-	width: 210px !important
+		
 
 .recommended
 	text-align: center
@@ -236,12 +234,13 @@ h2
 		.block_head
 			display: block
 			font-size: 20px
-			margin-top: 50px
+			//margin-top: 50px
 			margin-bottom: 20px
 			padding: 0 34px 0
 			color: #3d9ae0
 			width: 167px
 			height: 225px
+			padding-top: 50px
 		.block_text
 			position: relative
 			top: -190px
@@ -517,10 +516,13 @@ h2
 				width: 300px
 
 .tradein
-	h3#header
+	margin-bottom: 140px
+	h3#thanks-header
 		font-size: 46px
 		margin-bottom: 60px
-	p
+		text-transform: uppercase
+		font-weight: 300
+	p.tradein-text
 		margin-bottom: 20px
 	div#for-owners
 		margin: 100px 0 50px
@@ -530,7 +532,7 @@ h2
 		font-size: 38px
 		text-transform: uppercase
 		h3#l
-			font-weight: 400
+			font-weight: 300
 		h3#b
 			font-weight: bold
 			line-height: 1
@@ -545,12 +547,19 @@ h2
 		background-position: 0px 25px
 		#old-car
 			position: absolute
-			top: 760px
-			left: 470px
+			top: 830px
+			left: 460px
+			font-size: 14px
+			font-weight: 800
+			color: #c8c8c8
+			width: 100px
+
 		#new-car
 			position: absolute
-			top: 0px
-			left: 0px
+			left: 640px
+			color: #0cc5fd
+			font-size: 18px
+			font-weight: 800
 		#oldtonew_desc
 			margin-left: 400px
 			font-size: 14px
@@ -579,3 +588,56 @@ h2
 				margin-top: 25px
 				color: $blue
 				font-weight: bold
+
+#content 
+	.site_map
+		div[class|=scol]
+			width: 200px
+			display: inline-block
+			vertical-align: top
+			line-height: 2
+			margin-left: 40px
+			.head
+				line-height: 1.3 !important
+	
+.service
+	margin-top: 85px
+	h2
+		margin-bottom: 40px
+		font-size: 28px
+		font-weight: 300
+		width: 275px
+	.service-text
+		width: 260px
+		margin-left: 200px
+	.service-button
+		width: 260px
+		margin: 40px 0 0 200px
+		&.using-button
+			color: #3d9ae0
+			font-weight: bold
+			margin-top: 25px
+	.mnt
+		display: inline-block
+		height: 260px
+		background: url(/assets/img/mnt.png) no-repeat
+		background-position: 0px 80px
+		
+	.parts
+		display: inline-block
+		background: url(/assets/img/parts.png) no-repeat
+		background-position: 0px 80px
+		margin-left: 15px
+		.parts-button
+			width: 165px
+			margin: 40px 0 0 200px
+			&.help-button
+				color: #3d9ae0
+				font-weight: bold
+				margin-top: 25px
+	.using
+		background: url(/assets/img/using.png) no-repeat
+		background-position: 0px 80px
+	.help
+		background: url(/assets/img/help.png) no-repeat
+		background-position: 0px 80px

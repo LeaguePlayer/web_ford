@@ -115,46 +115,58 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ea06', end
 /************
 	Шапка
 ************/
-#header {
+
+
+
+
+.cont {
+         height: 150px;
+         text-align: center;
+ }
+      
+#fixed-div {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
 	padding: 10px 0;
 	margin-bottom: 40px;
 	border-bottom: 1px solid #e3e3e3;
 	box-shadow: 0 0 0 1px #eeeeee;
-}
-#header .content {
-	position: relative;
-}
-	#header .fordlogo {
-		display: inline-block;
-		vertical-align: middle;
-	}
+	background: #fff;
+	z-index: 100;
+    }
 
-	#header ul.header_menu {
+ #fix {
+		position: fixed;
+ 	 text-align: center;
+ }
+
+ #fixed-div ul.header_menu {
 		display: inline-block;
 		vertical-align: middle;
-	}
-		#header ul.header_menu li {
+		}
+		#fixed-div ul.header_menu li {
 			display: inline-block;
 			vertical-align: top;
 			width: 140px;
 			padding: 0 5px;
+			font-weight: 600
 		}
-		#header ul.header_menu li a {
+		#fixed-div ul.header_menu li a {
 			color: #000;
 			text-decoration: none;
 		}
-		#header ul.header_menu li a:hover {
+		#fixed-div ul.header_menu li a:hover {
 			text-decoration: underline;
 		}
-
-	#header .test {
+		#fixed-div .test {
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
 		margin-right: 50px;
-	}
-		#header .test a.green_button {}
-		#header .test .hint {
+		}
+		#fixed-div .test a.green_button {}
+		#fixed-div .test .hint {
 			font-weight: 600;
 			color: #fff;
 			font-size: 12px;
@@ -167,7 +179,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ea06', end
 			width: 170px;
 			display: none;
 		}
-		#header .test .hint:before {
+		#fixed-div .test .hint:before {
 			display: inline-block;
 			position: relative;
 			top: -16px;
@@ -180,38 +192,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ea06', end
 			border-color: transparent transparent #53c908;
 		}
 
-	#header ul.contacts {
+		#fixed-div ul.contacts {
 		display: inline-block;
 		vertical-align: middle;
 		color: #cfcfcf;
 		font-weight: normal;
-	}
-		#header ul.contacts li {
+		}
+		#fixed-div ul.contacts li {
 			text-align: right;
 		}
-		#header ul.contacts li .part {
+		#fixed-div ul.contacts li .part {
 			font-size: 12px;
 			display: inline-block;
 			vertical-align: middle;
 			margin-right: 5px;
 		}
-		#header ul.contacts li .phone {
+		#fixed-div ul.contacts li .phone {
 			font-size: 18px;
 			font-weight: 300;
 			display: inline-block;
 			vertical-align: middle;
 		}
-		#header ul.contacts li .phone strong {
+		#fixed-div ul.contacts li .phone strong {
 			font-weight: bold;
 		}
-
-	#header .autogradlogo {
-		position: absolute;
-		right: 0;
-		top: 50%;
-		margin-top: -26px;
-	}
-
+		#fixed-div .autogradlogo {
+		display: inline-block;
+		vertical-align: middle;
+		padding-left: 10px;
+		}
+		#fixed-div .fordlogo {
+		display: inline-block;
+		vertical-align: middle;
+		}
 
 /************
    Контент
@@ -480,8 +493,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ea06', end
     	top: 570px;
 	}
 	#content .gide .round .step.service {
-		left: 143px;
-    	top: 475px;
+		left: 70px;
+		top: 390px;
 	}
 	#content .gide .round .step.original {
 		left: 15px;
@@ -532,17 +545,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ea06', end
 		display: inline-block;
 		vertical-align: top;
 		line-height: 20px;
-	}
-	#content .site_map .col-1 {
-		width: 300px;
-		padding: 0 15px 0 15px;
-	}
-	#content .site_map .col-2 {
-		width: 300px;
-		padding: 0 30px 0 45px;
-	}
-	#content .site_map .col-3 {
 		width: 280px;
+		margin-left: 40px;
+	}
+
+	#content .site_map .head {
+		line-height: 1.3
 	}
 
 	#content .site_map .divide {
@@ -554,7 +562,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ea06', end
 		font-size: 14px;
 		font-weight: normal;
 		display: block;
-		line-height: 1.3;
+		line-height: 2;
 	}
 	#content .site_map a:hover {
 		text-decoration: none;
@@ -798,6 +806,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ea06', end
 		margin-right: 30px;
 		line-height: 30px;
 	}
+
+	#footer .menu a:hover {
+	text-decoration: underline;
+	}
+
 	#footer .menu a.select {
 		background: url('/assets/img/ford_mini.png') left center no-repeat;
 		padding-left: 50px;
@@ -805,6 +818,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ea06', end
 	#footer .menu a.for_bysines {
 		background: url('/assets/img/man.png') left center no-repeat;
 		padding-left: 30px;
+	}
+
+	#footer .menu a.for_bysines:hover {
+	text-decoration: underline;
 	}
 
 
