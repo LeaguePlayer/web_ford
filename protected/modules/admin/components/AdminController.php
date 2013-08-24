@@ -64,6 +64,7 @@ class AdminController extends CController
 	public function init(){
 		parent::init();
 		
+		Yii::app()->clientScript->registerCoreScript('jquery.ui');
 		
 		// получаем версию сайта
 		date_default_timezone_set("Asia/Dhaka");

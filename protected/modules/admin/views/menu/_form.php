@@ -5,7 +5,7 @@
 
 <?php echo $form->errorSummary($model);?>
 
-	<?php echo $form->groupSitesControlGroup($model, 'id_site', "Права доступа для сайтов"); ?>
+	<?php echo $form->groupSitesControlGroup($model, 'id_site', "Показывать на сайтах"); ?>
 
 	<?php echo $form->dropDownListControlGroup($model,'id_category', fnc::menuCategories(), array('class'=>'span8', 'displaySize'=>1)); ?>
 
@@ -17,7 +17,7 @@
     </div>
 
 	
-		<?php echo $form->dropDownListControlGroup($model,'show_on_main', array("Нет","Да"), array('class'=>'span8', 'displaySize'=>1)); ?>
+		<?php echo $form->dropDownListControlGroup($model,'show_on_main', fnc::returnYesNo(), array('class'=>'span8', 'displaySize'=>1)); ?>
         
   
 

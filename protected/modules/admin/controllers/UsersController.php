@@ -37,13 +37,14 @@ class UsersController extends AdminController
 		
 		
 			
-		$model = Users::model()->with( array('sites' => array('condition' => 'post_type = "Users"')) )->findByPk($id);
+		$model = Users::model()->with( 'sites' )->findByPk($id);
 		if(!is_object($model)) $model = Users::model()->findByPk($id);
 		
-		$site_id_edited_user = Users::model()->with( array('site' => array('condition' => 'post_type = "Users" and id_site = :id_site','params'=>array(':id_site'=>Yii::app()->user->id_site))) )->findByPk($id)->site->id_site;
 		
-		if( (Yii::app()->user->id_site!=0) and ( Yii::app()->user->id_site!=$site_id_edited_user ) )
+		//
+		if($model->validForEdit())
 			throw new CHttpException(404, 'Unable to find the requested object.');
+			//
 		
 		if(isset($_POST['Users']))
 		{

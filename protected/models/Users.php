@@ -37,8 +37,8 @@ class Users extends EActiveRecord
 	public function relations()
 	{
 		return array(
-			'sites' => array(self::HAS_MANY, 'Objectrelations', 'post_id'),
-			'site' => array(self::HAS_ONE, 'Objectrelations', 'post_id', 'order'=>'site.id_site ASC'),
+			'sites' => array(self::HAS_MANY, 'Objectrelations', 'post_id','condition'=>"post_type = 'Users'"),
+			'site' => array(self::HAS_ONE, 'Objectrelations', 'post_id', 'order'=>'site.id_site ASC','condition'=>"post_type = 'Users'"),
 		);
 	}
 
@@ -70,15 +70,14 @@ class Users extends EActiveRecord
 		
 		$criteria->compare('login',$this->login,true);
 		$criteria->compare('password',$this->password,true);
-		$criteria->compare('status',$this->status);
+		$criteria->compare('t.status',$this->status);
 		$criteria->compare('sort',$this->sort);
 		$criteria->compare('create_time',$this->create_time);
 		$criteria->compare('update_time',$this->update_time);
 		 
 		if(Yii::app()->user->id_site!=0)
 		{
-			$criteria->with = array('site' => array('condition'=>"post_type='Users' and id_site = :id_site",'params'=>array(':id_site'=>Yii::app()->controller->id_site)) );
-			//$criteria->addCondition("t.status = 0");
+			$criteria->with = array('site' => array('condition'=>"id_site = :id_site",'params'=>array(':id_site'=>Yii::app()->controller->id_site)) );
 		}
 
 		return new CActiveDataProvider($this, array(

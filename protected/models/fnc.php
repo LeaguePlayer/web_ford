@@ -390,6 +390,20 @@ if(is_object($model))
 	}
 	
 	
+	public static function returnYesNo($n=false)
+	{
+		
+		$result = array(
+							0=>"Нет",
+							1=>"Да",
+		);
+		
+		
+		if(is_numeric($n))
+			return $result[$n];
+		else return $result;
+	}
+	
     
 }
 ?>

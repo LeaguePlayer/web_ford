@@ -19,7 +19,7 @@ class UserIdentity extends CUserIdentity
 	{
 		
 		
-		$find_user = Users::model()->with( array('site' => array('condition' => 'post_type = "Users" and (id_site=0 or id_site = :id_site)', 'params'=>array('id_site'=>Yii::app()->controller->id_site))) )->find( array("condition"=>"login = :username and password = :password and t.status=1","params"=>array(':username'=>$this->username,':password'=>md5($this->password) ) ) );
+		$find_user = Users::model()->with( array('site' => array('condition' => '(id_site=0 or id_site = :id_site)', 'params'=>array('id_site'=>Yii::app()->controller->id_site))) )->find( array("condition"=>"login = :username and password = :password and t.status=1","params"=>array(':username'=>$this->username,':password'=>md5($this->password) ) ) );
 		
 		
 		

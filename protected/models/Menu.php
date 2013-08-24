@@ -38,8 +38,8 @@ class Menu extends EActiveRecord
 	public function relations()
 	{
 		return array(
-		'sites_menu' => array(self::HAS_MANY, 'Objectrelations', 'post_id'),
-			'site_menu' => array(self::HAS_ONE, 'Objectrelations', 'post_id', 'order'=>'site_menu.id_site ASC'),
+				'sites' => array(self::HAS_MANY, 'Objectrelations', 'post_id','condition'=>"post_type = 'Menu'"),
+			'site' => array(self::HAS_ONE, 'Objectrelations', 'post_id', 'order'=>'site.id_site ASC','condition'=>"post_type = 'Menu'"),
 		);
 	}
 
@@ -73,13 +73,21 @@ class Menu extends EActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('link',$this->link,true);
 		$criteria->compare('show_on_main',$this->show_on_main);
-		$criteria->compare('status',$this->status);
+		$criteria->compare('t.status',$this->status);
 		$criteria->compare('sort',$this->sort);
 		$criteria->compare('create_time',$this->create_time);
 		$criteria->compare('update_time',$this->update_time);
+		
+		if(Yii::app()->user->id_site!=0)
+		{
+			$criteria->with = array('site' => array('condition'=>"id_site = :id_site",'params'=>array(':id_site'=>Yii::app()->controller->id_site)) );
+		}
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort'=>array(
+				'defaultOrder'=>'t.sort ASC',
+			  )
 		));
 	}
 	
@@ -96,6 +104,20 @@ class Menu extends EActiveRecord
 	public function getModelName()
 	{
 		return __CLASS__;
+	}
+	
+	public function beforeSave()
+	{
+		parent::beforeSave();
+		
+		if($this->isNewRecord)
+		{
+			$get_last_sort_value = self::model()->find(array('order'=>'sort DESC'))->sort;
+			$this->sort = $get_last_sort_value+1;
+		}
+		
+		
+		return true;
 	}
 
 }

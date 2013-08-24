@@ -254,5 +254,19 @@ class EActiveRecord extends CActiveRecord
 	}
 	
 	
+	public function validForEdit()
+	{
+		
+		$site_id_edited_user = $this->with( array('site' => array('condition' => 'id_site = :id_site','params'=>array(':id_site'=>Yii::app()->user->id_site))) )->findByPk($this->id)->site->id_site;
+		
+		
+		
+		if( (Yii::app()->user->id_site!=0) and ( Yii::app()->user->id_site!=$site_id_edited_user ) )
+			return true;
+		else return false;
+			
+	}
+	
+	
 	
 }
