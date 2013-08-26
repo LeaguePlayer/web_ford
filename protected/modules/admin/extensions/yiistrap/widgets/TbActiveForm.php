@@ -436,6 +436,7 @@ class TbActiveForm extends CActiveForm
 	
 	public function groupSitesControlGroup($model, $attribute, $title)
     {
+		if(Yii::app()->user->id_site!=0) return false;
        $options = Yii::app()->controller->available_array_domains;
 	   $html = "<div class='group_checkboxes'>";
 	   $html .="<h3>{$title}</h3>";

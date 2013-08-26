@@ -69,3 +69,7 @@ form .line{
 .ui-timepicker-div dl dd {
 	margin: 0 10px 10px 80px !important;
 }
+.icon-add-menu
+{
+	background-position: 0px -96px;
+}

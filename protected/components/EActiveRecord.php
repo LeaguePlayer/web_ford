@@ -211,8 +211,10 @@ class EActiveRecord extends CActiveRecord
 	
 	public function relationsSites($array, $post_type)
 	{
+		
 		//echo count($array);die();
 		$actual_values = array("999999999");
+		
 		
 		if(count($array) >0 )
 		{
@@ -223,11 +225,12 @@ class EActiveRecord extends CActiveRecord
 				$actual_values[] = $value;
 				
 				$check_this_value = Objectrelations::model()->find("post_type = '{$post_type}' and post_id={$this->id} and id_site={$value}");
-				
+				//echo "post_type = '{$post_type}' and post_id={$this->id} and id_site={$value}<br>";
 				
 				
 				if(!is_object($check_this_value))
 				{
+					//echo "saved<br>";
 					$object = new Objectrelations;
 					$object->id_site = $value;
 					$object->post_type = $post_type;
@@ -238,11 +241,11 @@ class EActiveRecord extends CActiveRecord
 			
 			// удаляем те ключи, которые были сняты
 			
-			
+			//die();
 			
 		}
 		
-		
+		if(Yii::app()->user->id_site!=0) return false;
 		if(count($actual_values)>0)
 			{
 				$sql_condition = implode(", ",$actual_values);	
@@ -257,11 +260,13 @@ class EActiveRecord extends CActiveRecord
 	public function validForEdit()
 	{
 		
-		$site_id_edited_user = $this->with( array('site' => array('condition' => 'id_site = :id_site','params'=>array(':id_site'=>Yii::app()->user->id_site))) )->findByPk($this->id)->site->id_site;
+		$site_id_edited_user = $this->with( array('site' => array('condition' => '(id_site = :id_site or id_site=0)','params'=>array(':id_site'=>Yii::app()->user->id_site))) )->findByPk($this->id)->site->id_site;
+		//echo count($site_id_edited_user);die();
 		
+		//echo $site_id_edited_user;die();
+		if(Yii::app()->user->id_site==0) return false;
 		
-		
-		if( (Yii::app()->user->id_site!=0) and ( Yii::app()->user->id_site!=$site_id_edited_user ) )
+		if(  ( Yii::app()->user->id_site!=$site_id_edited_user and $site_id_edited_user!=0 ) or count($site_id_edited_user)==0 )
 			return true;
 		else return false;
 			

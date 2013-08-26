@@ -19,6 +19,7 @@ class UsersController extends AdminController
 			
 			if($model->save())
 			{
+				if(empty($relationsSites)) $relationsSites=array(Yii::app()->user->id_site);
 				$model->relationsSites($relationsSites, $model->getModelName());
 				$this->redirect(array('/admin/users/list/'));
 			}

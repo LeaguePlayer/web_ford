@@ -32,7 +32,10 @@ $('.search-form form').submit(function(){
             return ui;
         };
  
-        $('#menu-grid table.items tbody').sortable({
+        
+		function sortGrid()
+		{
+			$('#menu-grid table.items tbody').sortable({
             forcePlaceholderSize: true,
             forceHelperSize: true,
             items: 'tr',
@@ -50,7 +53,10 @@ $('.search-form form').submit(function(){
                 });
             },
             helper: fixHelper
-        }).disableSelection();
+        	}).disableSelection();	
+		}
+		
+		sortGrid();
     ";
  
     Yii::app()->clientScript->registerScript('sortable-project', $str_js);
@@ -67,6 +73,7 @@ $('.search-form form').submit(function(){
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'menu-grid',
+	 'afterAjaxUpdate'=>'sortGrid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	 'rowCssClassExpression'=>'"items[]_{$data->id}"',
@@ -113,7 +120,20 @@ $('.search-form form').submit(function(){
 		),
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
-			'template'=>'{update}{delete}',
+			'template'=>'{view} {update} {delete}',
+			'buttons'=>array
+                    (
+                       
+						'view' => array
+                        (
+                            
+							//'label'=>'<i class="icon-add-menu"></i>',
+							'options'=>array('target'=>"_blank"),
+                            //'imageUrl'=>Yii::app()->request->baseUrl.'/media/images/cloud.png',
+                            'url'=>'$data->link',
+                        ),
+                        
+                    ),
 		),
 	),
 )); ?>
