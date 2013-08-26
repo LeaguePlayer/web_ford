@@ -8,7 +8,7 @@
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Золотая черепаха',
+	'name'=>'АВТОГРАД Ford',
 	'language' => 'ru',
 	'theme'=>'default',
 	// preloading 'log' component

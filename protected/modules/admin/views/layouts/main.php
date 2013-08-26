@@ -24,10 +24,7 @@
 				array('label'=>'Настройки сайта', 'url'=>$this->url_settings),
 				array('label'=>'Пользователи', 'url'=>"/admin/users/list/"),
 				array('label'=>'Разделы', 'url'=>'#', 'items' => array(
-					array('label'=>'Автомобили', 'url'=>'#', 'items' => array(
-						array('label'=>'Создать', 'url'=>"/admin/cars/create"),
-						array('label'=>'Список', 'url'=>"/admin/cars/list"),
-					)),
+					
 					array('label'=>'Меню', 'url'=>'/admin/menu/list', 'items' => array(
 						array('label'=>'Создать', 'url'=>"/admin/menu/create"),
 						array('label'=>'Список', 'url'=>"/admin/menu/list"),
